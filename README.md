@@ -1,8 +1,19 @@
+## To create a folder via Terminal
+mkdir foldername
+
+## To create a file via Terminal 
+
+touch filename.filetype
+
 ## How to create and run:
 
 npx create-react-app first --template typescript
 
 cd first
+
+code . -> To open the project in new Visual Studio
+
+npm start gives ajv error. Hence, I go with yarn
 
 rmdir /s /q node_modules
 
@@ -10,7 +21,7 @@ del package-lock.json
 
 npm install -g yarn
 
-yarn -v
+yarn -v        // To check the version
 
 yarn install
 
@@ -69,11 +80,10 @@ src -> create folder "components"
 create page name "Home.tsx"
 
 ```
-
 function Home() {
     return (
         <>
-        <h1>Welcome to Home Page (from Components) </h1>
+        <p>Welcome to Home Page (From Components) </p>
         </>
     );
 }
@@ -84,17 +94,22 @@ export default Home;
 
 Update App.tsx
 
+```
+
 import Home from "./components/Home";
 
 function App() {
   return (
     <div>
+      <h1>Hello! from App</h1>
       <Home />
     </div>
   );
 }
 
 export default App;
+
+```
 
 ### Note:
 
