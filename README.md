@@ -1,3 +1,7 @@
+### React:
+
+React is a JavaScript library for building user interfaces.
+
 ## To create a folder via Terminal
 mkdir foldername
 
