@@ -73,7 +73,7 @@ create page name "Home.tsx"
 function Home() {
     return (
         <>
-        <h1>Welcome to Home Page</h1>
+        <h1>Welcome to Home Page (from Components) </h1>
         </>
     );
 }
@@ -99,3 +99,11 @@ export default App;
 ### Note:
 
 Always commit before deploy. Deploy is not version control.
+
+git add .
+
+git commit -m "Add Home component"
+
+git push
+
+yarn deploy
