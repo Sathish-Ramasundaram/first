@@ -1,6 +1,6 @@
 ### React:
 
-React is a JavaScript library for building user interfaces.
+React is a JavaScript library for building user interfaces using a component-based architecture
 
 ## To create a folder via Terminal
 mkdir foldername
@@ -8,6 +8,10 @@ mkdir foldername
 ## To create a file via Terminal 
 
 touch filename.filetype
+
+## To delete a file via Terminal
+
+del filename.filetype
 
 ## How to create and run:
 
@@ -114,6 +118,37 @@ function App() {
 export default App;
 
 ```
+
+New component: Footer.tsx
+
+function Footer() {
+    return (
+        <footer style={{background: "yellow"}}>
+        <p>&copy; All rights reserved</p>
+        </footer> 
+    );
+}
+
+export default Footer;
+
+updated App.tsx
+
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <div>
+      <h1>Hello! from App</h1>
+      <Home />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+
+---
 
 ### Note:
 
