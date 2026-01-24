@@ -1,8 +1,12 @@
-function Home() {
+type StoreName = {
+    name: string;
+};
+
+function Home({name}: StoreName) {
     return (
-        <>
-        <p>Welcome to Home Page (From Components) </p>
-        </>
+        <div>
+        <p>Welcome to {name} (from component & props) </p>
+        </div>
     );
 }
 

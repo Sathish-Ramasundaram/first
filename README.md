@@ -1,6 +1,8 @@
 ### React:
 
-React is a JavaScript library for building user interfaces using a component-based architecture
+React is a JavaScript library for building user interfaces using a component-based architecture, allowing developers to create reusable UI components
+
+#### UI (User Interface) is the part of an application or system that users see and interact with.
 
 ## To create a folder via Terminal
 mkdir foldername
@@ -23,11 +25,11 @@ code . -> To open the project in new Visual Studio
 
 npm start gives ajv error. Hence, I go with yarn
 
-rmdir /s /q node_modules
+rmdir /s /q node_modules  // remove_directory all_subfolders&files quiet_mode folder_name
 
 del package-lock.json
 
-npm install -g yarn
+npm install -g yarn // node package manager. Yarn - Alternative package
 
 yarn -v        // To check the version
 
@@ -149,6 +151,67 @@ function App() {
 export default App;
 
 ---
+
+Add css to put footer in down:
+
+.app {
+  display: flex;           /* enables one-dimensional flex layout */
+  flex-direction: column;  /* stacks children vertically (top → bottom) */
+  min-height: 100vh;       /* ensures container is at least viewport height */
+}
+
+footer {
+  margin-top: auto;
+}
+
+updated App.tsx
+
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import "./App.css";
+
+function App() {
+  return (
+    <div className="app">
+      <h1>Hello! from App</h1>
+      <Home />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+
+## Props:
+Props are immutable data passed from a parent component to a child component.
+
+App.tsx
+
+```
+<Home name="SR Stores"/>
+
+```
+
+Home.tsx
+
+```
+type StoreName = {
+    name: string;
+};
+
+function Home({name}: StoreName) {
+    return (
+        <div>
+        <p>Welcome to {name} (from component & props) </p>
+        </div>
+    );
+}
+
+export default Home;
+```
+
+## useState
+useState is a React Hook that lets a component remember data and re-render when that data changes.
 
 ### Note:
 
