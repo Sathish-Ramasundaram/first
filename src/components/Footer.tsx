@@ -1,7 +1,9 @@
-function Footer() {
+import { StringName } from "./types";
+
+function Footer({name}: StringName) {
     return (
         <footer style={{background: "yellow"}}>
-        <p>&copy; All rights reserved</p>
+        <p>&copy; {name}</p>
         </footer> 
     );
 }

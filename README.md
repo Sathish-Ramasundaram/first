@@ -210,8 +210,42 @@ function Home({name}: StoreName) {
 export default Home;
 ```
 
+create new file types.ts and import for other component as well. 
+
+export type StringName = {
+    name: string;
+};
+
+## JSX - JavaScript XML
+JSX is a syntax extension for JavaScript that allows writing HTML-like code inside JavaScript to define UI in React.
+
 ## useState
 useState is a React Hook that lets a component remember data and re-render when that data changes.
+
+```
+import { useState } from "react";
+
+function Counter () {
+
+    const [count, setCount] = useState(0);
+    return (
+        <div>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <p>Counter Value: {count}</p>
+
+        </div>
+    );
+}
+
+export default Counter;
+
+```
+
+Decrement: 
+
+<button onClick={() => setCount(count - 1)}>Decrement</button>
+
+---
 
 ### Note:
 
